@@ -24,4 +24,9 @@ picture {
     margin: 0;
 }
 
+/* Set up the body */
+body {
+    background-color: black;
+}
+
 
