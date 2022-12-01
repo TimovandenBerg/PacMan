@@ -1,0 +1,27 @@
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
+
+:root {
+
+}
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* Box sizing */
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+/* Reset margin */
+body,
+h1,h2,h3,h4,h5,
+p,
+figure,
+picture {
+    margin: 0;
+}
+
+
