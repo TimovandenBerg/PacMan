@@ -96,12 +96,22 @@ map.forEach((row, i) => {
     })
 });
 
-// Loop voor udpate draw voor speler
+// Loop voor udpate draw voor speler zodat Pacman kan bewegen
 function animate() {
     requestAnimationFrame(animate);
     c.clearRect(0, 0, canvas.width, canvas.height);
     boundaries.forEach(boundary => {
         boundary.draw();
+        
+        // Get top, middle and bottom player
+        // Get top, middle and bottom boundary
+        // For het vinden van botsing tussen beide
+        if (player.position.y - player.radius <= boundary.position.y + boundary.height 
+            && player.position.x + player.radius >= boundary.position.x 
+            && player.position.y + player.radius >= boundary.position.y
+            && player.position.x - player.radius <= boundary.position.x + boundary.width) {
+                console.log("yes");
+        }
     });
     player.update();
     player.velocity.y = 0;
